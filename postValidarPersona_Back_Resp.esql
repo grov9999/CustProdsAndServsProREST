@@ -1,0 +1,160 @@
+
+
+CREATE COMPUTE MODULE postValidarPersona_Back_Resp
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		
+		DECLARE refTrama REFERENCE TO Environment.Trama;
+		--DECLARE respTrama CHARACTER;
+		
+		DECLARE WVC_COD_UNICO CHARACTER SUBSTRING(refTrama FROM 1 FOR 10);
+		DECLARE WVC_COD_PRODUCTO CHARACTER SUBSTRING(refTrama FROM 11 FOR 3);
+		DECLARE WVC_RUC CHARACTER SUBSTRING(refTrama FROM 14 FOR 11);
+		DECLARE WVC_CODMON CHARACTER SUBSTRING(refTrama FROM 25 FOR 3);
+		
+		DECLARE respTrama CHARACTER WVC_COD_UNICO || WVC_COD_PRODUCTO || WVC_RUC || WVC_CODMON;
+		
+	   	DECLARE WVC_RET_ESTADO CHARACTER;
+	   	DECLARE WVC_OUT_MENSAJ CHARACTER;
+
+	   	/*--EXITO--*/
+	   	--RETORNO 1
+	   	IF respTrama = '123456789012320123456789EUR' THEN
+	   		SET WVC_RET_ESTADO = 'OK';
+	   		SET WVC_OUT_MENSAJ = 'DATOS CORRECTOS';
+	   		SET Environment.TramaReq = respTrama;
+	   		SET Environment.OutputTrama = WVC_RET_ESTADO || WVC_OUT_MENSAJ;
+	   		PROPAGATE TO TERMINAL 'out1';
+	   	ELSE 
+	   		IF respTrama = '987654321045620567890123AFN' THEN
+	   			SET WVC_RET_ESTADO = 'OK';
+	   			SET WVC_OUT_MENSAJ = 'DATOS CORRECTOS';
+	   			SET Environment.TramaReq = respTrama;
+	   			SET Environment.OutputTrama = WVC_RET_ESTADO || WVC_OUT_MENSAJ;
+	   			PROPAGATE TO TERMINAL 'out2';
+	   		ELSE 
+	   			IF respTrama = '246813579078920987654321EUR' THEN
+			   		SET WVC_RET_ESTADO = 'OK';
+			   		SET WVC_OUT_MENSAJ = 'DATOS CORRECTOS';
+			   		SET Environment.TramaReq = respTrama;
+			   		SET Environment.OutputTrama = WVC_RET_ESTADO || WVC_OUT_MENSAJ;
+		   			PROPAGATE TO TERMINAL 'out3';
+		   		ELSE 
+		   			IF respTrama = '135792468023421345678901DKK' THEN
+				   		SET WVC_RET_ESTADO = 'OK';
+					   	SET WVC_OUT_MENSAJ = 'DATOS CORRECTOS';
+					   	SET Environment.TramaReq = respTrama;
+					   	SET Environment.OutputTrama = WVC_RET_ESTADO || WVC_OUT_MENSAJ;
+					   	PROPAGATE TO TERMINAL 'out4';	
+		   			ELSE
+		   				IF respTrama = '864209753156721789012345EGP' THEN
+					   		SET WVC_RET_ESTADO = 'OK';
+					   		SET WVC_OUT_MENSAJ = 'DATOS CORRECTOS';
+					   		SET Environment.TramaReq = respTrama;
+					   		SET Environment.OutputTrama = WVC_RET_ESTADO || WVC_OUT_MENSAJ;
+					   		PROPAGATE TO TERMINAL 'out';
+		   				ELSE 
+		   					IF respTrama = '314159265389022123456789111' THEN
+								SET WVC_RET_ESTADO = 'NO';
+						   		SET WVC_OUT_MENSAJ = 'DATOS ERRONEOS';	   		
+						   		SET Environment.OutputTrama = WVC_RET_ESTADO || WVC_OUT_MENSAJ;
+						   		PROPAGATE TO TERMINAL 'out';
+		   					ELSE 
+		   						IF respTrama = '271828182834522567890123' THEN
+							   		SET WVC_RET_ESTADO = 'NO';
+							   		SET WVC_OUT_MENSAJ = 'DATOS ERRONEOS';
+							   		SET Environment.OutputTrama = WVC_RET_ESTADO || WVC_OUT_MENSAJ;
+							   		PROPAGATE TO TERMINAL 'out'; 
+					   			ELSE
+				   					SET WVC_RET_ESTADO = 'NO';
+				   					SET WVC_OUT_MENSAJ = 'ERROR GENERAL';
+				   					SET Environment.OutputTrama = WVC_RET_ESTADO || WVC_OUT_MENSAJ;
+				   					PROPAGATE TO TERMINAL 'failure';
+		   						END IF;
+		   					END IF;
+		   				END IF;	
+		   			END IF;
+	   			END IF;
+	   		END IF;
+	   	END IF;
+	   	/*
+	   	--RETORNO 2
+	   	IF respTrama = '987654321045620567890123AFN' THEN
+	   		SET WVC_RET_ESTADO = 'OK';
+	   		SET WVC_OUT_MENSAJ = 'DATOS CORRECTOS';
+	   		SET Environment.TramaReq = respTrama;
+	   		SET Environment.OutputTrama = WVC_RET_ESTADO || WVC_OUT_MENSAJ;
+	   		PROPAGATE TO TERMINAL 'out2';
+	   	ELSE
+	   		SET WVC_RET_ESTADO = 'NO';
+	   		SET WVC_OUT_MENSAJ = 'ERROR GENERAL';
+	   		PROPAGATE TO TERMINAL 'failure';
+	   	END IF;
+	   	
+	   	--RETORNO 3
+	   	IF respTrama = '246813579078920987654321EUR' THEN
+	   		SET WVC_RET_ESTADO = 'OK';
+	   		SET WVC_OUT_MENSAJ = 'DATOS CORRECTOS';
+	   		SET Environment.TramaReq = respTrama;
+	   		SET Environment.OutputTrama = WVC_RET_ESTADO || WVC_OUT_MENSAJ;
+	   		PROPAGATE TO TERMINAL 'out3';
+	   	ELSE
+	   		SET WVC_RET_ESTADO = 'NO';
+	   		SET WVC_OUT_MENSAJ = 'ERROR GENERAL';
+	   		PROPAGATE TO TERMINAL 'failure';
+	   	END IF;
+
+	   	--RETORNO 4
+	   	IF respTrama = '135792468023421345678901DKK' THEN
+	   		SET WVC_RET_ESTADO = 'OK';
+	   		SET WVC_OUT_MENSAJ = 'DATOS CORRECTOS';
+	   		SET Environment.TramaReq = respTrama;
+	   		SET Environment.OutputTrama = WVC_RET_ESTADO || WVC_OUT_MENSAJ;
+	   		PROPAGATE TO TERMINAL 'out4';
+	   	ELSE
+	   		SET WVC_RET_ESTADO = 'NO';
+	   		SET WVC_OUT_MENSAJ = 'ERROR GENERAL';
+	   		PROPAGATE TO TERMINAL 'failure';
+	   	END IF;
+	   		
+	   	--RETORNO 5
+	   	IF respTrama = '864209753156721789012345EGP' THEN
+	   		SET WVC_RET_ESTADO = 'OK';
+	   		SET WVC_OUT_MENSAJ = 'DATOS CORRECTOS';
+	   		SET Environment.TramaReq = respTrama;
+	   		SET Environment.OutputTrama = WVC_RET_ESTADO || WVC_OUT_MENSAJ;
+	   		PROPAGATE TO TERMINAL 'out';
+	   	ELSE
+	   		SET WVC_RET_ESTADO = 'NO';
+	   		SET WVC_OUT_MENSAJ = 'ERROR GENERAL';
+	   		PROPAGATE TO TERMINAL 'failure';
+	   	END IF;
+
+	   /*--ERROR--*/
+	   --RETORNO A
+		IF respTrama = '314159265389022123456789111' THEN
+			SET WVC_RET_ESTADO = 'OK';
+	   		SET WVC_OUT_MENSAJ = 'DATOS ERRONEOS';	   		
+	   		SET Environment.OutputTrama = WVC_RET_ESTADO || WVC_OUT_MENSAJ;
+	   		PROPAGATE TO TERMINAL 'out';
+	   	ELSE
+	   		SET WVC_RET_ESTADO = 'NO';
+	   		SET WVC_OUT_MENSAJ = 'ERROR GENERAL';
+	   		PROPAGATE TO TERMINAL 'failure';
+	   	END IF;
+	   	
+	   --RETORNO B
+	   	IF respTrama = '271828182834522567890123' THEN
+	   		SET WVC_RET_ESTADO = 'OK';
+	   		SET WVC_OUT_MENSAJ = 'DATOS ERRONEOS';
+	   		SET Environment.OutputTrama = WVC_RET_ESTADO || WVC_OUT_MENSAJ;
+	   		PROPAGATE TO TERMINAL 'out';
+	   	ELSE
+	   		SET WVC_RET_ESTADO = 'NO';
+	   		SET WVC_OUT_MENSAJ = 'ERROR GENERAL';
+	   		PROPAGATE TO TERMINAL 'failure';
+	   	END IF;
+*/
+		RETURN TRUE;
+	END;
+END MODULE;

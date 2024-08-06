@@ -6,33 +6,114 @@
     <colorGraphic16 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/CustProdsAndServsProREST/icons/full/obj16/postValidarPersona.gif"/>
     <colorGraphic32 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/CustProdsAndServsProREST/icons/full/obj30/postValidarPersona.gif"/>
     <composition>
-      <nodes xmi:type="eflow:FCMSource" xmi:id="InTerminal.Input_1" location="79,69">
+      <nodes xmi:type="eflow:FCMSource" xmi:id="InTerminal.Input_1" location="31,40">
         <translation xmi:type="utility:TranslatableString" key="Input" bundleName="postValidarPersona" pluginId="CustProdsAndServsProREST"/>
       </nodes>
-      <nodes xmi:type="eflow:FCMSink" xmi:id="OutTerminal.Output_1" location="1175,428">
+      <nodes xmi:type="eflow:FCMSink" xmi:id="OutTerminal.Output_1" location="1219,256">
         <translation xmi:type="utility:TranslatableString" key="Output" bundleName="postValidarPersona" pluginId="CustProdsAndServsProREST"/>
       </nodes>
-      <nodes xmi:type="ComIbmTrace.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_1" location="427,274" destination="file" filePath="D:\TRAINEE\Synopsis\MATRIZ\DebugInput.log" pattern="========================================INPUTDEBUG-2===========================&#xD;&#xA;&#xD;&#xA;[ExceptionList:${ExceptionList}]&#xD;&#xA;[LocalEnvironment:${LocalEnvironment}]&#xD;&#xA;[Root:${Root}]&#xD;&#xA;[Environment:${Environment}]">
+      <nodes xmi:type="ComIbmTrace.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_1" location="226,166" destination="file" filePath="D:\TRAINEE\Synopsis\MATRIZ\DebugInput.log" pattern="========================================INPUTDEBUG-2===========================&#xD;&#xA;&#xD;&#xA;[ExceptionList:${ExceptionList}]&#xD;&#xA;[LocalEnvironment:${LocalEnvironment}]&#xD;&#xA;[Root:${Root}]&#xD;&#xA;[Environment:${Environment}]">
         <translation xmi:type="utility:ConstantString" string="Input_Debug"/>
       </nodes>
-      <nodes xmi:type="ComIbmCompute.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_6" location="281,273" computeExpression="esql://routine/#postValidarPersona_Req.Main" computeMode="destinationAndMessage">
+      <nodes xmi:type="ComIbmCompute.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_6" location="150,170" computeExpression="esql://routine/#postValidarPersona_Req.Main" computeMode="destinationAndMessage">
         <translation xmi:type="utility:ConstantString" string="Service_Input"/>
       </nodes>
-      <nodes xmi:type="ComIbmTrace.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_7" location="210,68" destination="file" filePath="D:\TRAINEE\Synopsis\MATRIZ\Debug.log" pattern="========================================DEBUG-1===========================&#xD;&#xA;&#xD;&#xA;[ExceptionList:${ExceptionList}]&#xD;&#xA;[LocalEnvironment:${LocalEnvironment}]&#xD;&#xA;[Root:${Root}]&#xD;&#xA;[Environment:${Environment}]">
+      <nodes xmi:type="ComIbmTrace.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_7" location="71,175" destination="file" filePath="D:\TRAINEE\Synopsis\MATRIZ\Debug.log" pattern="========================================DEBUG-1===========================&#xD;&#xA;&#xD;&#xA;[ExceptionList:${ExceptionList}]&#xD;&#xA;[LocalEnvironment:${LocalEnvironment}]&#xD;&#xA;[Root:${Root}]&#xD;&#xA;[Environment:${Environment}]">
         <translation xmi:type="utility:ConstantString" string="Debug"/>
       </nodes>
-      <nodes xmi:type="ComIbmCompute.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_9" location="565,274" computeExpression="esql://routine/#postValidarPersona_Back_Req.Main" computeMode="destinationAndMessage">
+      <nodes xmi:type="ComIbmCompute.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_9" location="310,164" computeExpression="esql://routine/#postValidarPersona_Back_Req.Main" computeMode="destinationAndMessage">
         <translation xmi:type="utility:ConstantString" string="Back_Req"/>
       </nodes>
-      <nodes xmi:type="ComIbmTrace.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_10" location="684,274" destination="file" filePath="D:\TRAINEE\Synopsis\MATRIZ\DebugReq.log" pattern="========================================REQDEBUG-3===========================&#xD;&#xA;&#xD;&#xA;[ExceptionList:${ExceptionList}]&#xD;&#xA;[LocalEnvironment:${LocalEnvironment}]&#xD;&#xA;[Root:${Root}]&#xD;&#xA;[Environment:${Environment}]">
+      <nodes xmi:type="ComIbmTrace.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_10" location="377,168" destination="file" filePath="D:\TRAINEE\Synopsis\MATRIZ\DebugReq.log" pattern="========================================REQDEBUG-3===========================&#xD;&#xA;&#xD;&#xA;[ExceptionList:${ExceptionList}]&#xD;&#xA;[LocalEnvironment:${LocalEnvironment}]&#xD;&#xA;[Root:${Root}]&#xD;&#xA;[Environment:${Environment}]">
         <translation xmi:type="utility:ConstantString" string="Req_Debug"/>
+      </nodes>
+      <nodes xmi:type="ComIbmCompute.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_2" location="456,308" computeExpression="esql://routine/#postValidarPersona_Back_Resp.Main" computeMode="destinationAndMessage">
+        <translation xmi:type="utility:ConstantString" string="Back_Resp"/>
+      </nodes>
+      <nodes xmi:type="ComIbmTrace.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_3" location="697,456" destination="file" filePath="D:\TRAINEE\Synopsis\MATRIZ\DebugResp.log" pattern="========================================RESPDEBUG-4===========================&#xD;&#xA;&#xD;&#xA;[ExceptionList:${ExceptionList}]&#xD;&#xA;[LocalEnvironment:${LocalEnvironment}]&#xD;&#xA;[Root:${Root}]&#xD;&#xA;[Environment:${Environment}]">
+        <translation xmi:type="utility:ConstantString" string="Resp_Debug"/>
+      </nodes>
+      <nodes xmi:type="ComIbmTrace.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_5" location="688,359" destination="file" filePath="D:\TRAINEE\Synopsis\MATRIZ\DebugResp1.log" pattern="========================================RESPDEBUG-4.1===========================&#xD;&#xA;&#xD;&#xA;[ExceptionList:${ExceptionList}]&#xD;&#xA;[LocalEnvironment:${LocalEnvironment}]&#xD;&#xA;[Root:${Root}]&#xD;&#xA;[Environment:${Environment}]">
+        <translation xmi:type="utility:ConstantString" string="Resp_Debug01"/>
+      </nodes>
+      <nodes xmi:type="ComIbmTrace.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_8" location="686,275" destination="file" filePath="D:\TRAINEE\Synopsis\MATRIZ\DebugResp2.log" pattern="========================================RESPDEBUG-4.2===========================&#xD;&#xA;&#xD;&#xA;[ExceptionList:${ExceptionList}]&#xD;&#xA;[LocalEnvironment:${LocalEnvironment}]&#xD;&#xA;[Root:${Root}]&#xD;&#xA;[Environment:${Environment}]">
+        <translation xmi:type="utility:ConstantString" string="RespDebug02"/>
+      </nodes>
+      <nodes xmi:type="ComIbmTrace.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_11" location="678,196" destination="file" filePath="D:\TRAINEE\Synopsis\MATRIZ\DebugResp3.log" pattern="========================================RESPDEBUG-4.3===========================&#xD;&#xA;&#xD;&#xA;[ExceptionList:${ExceptionList}]&#xD;&#xA;[LocalEnvironment:${LocalEnvironment}]&#xD;&#xA;[Root:${Root}]&#xD;&#xA;[Environment:${Environment}]">
+        <translation xmi:type="utility:ConstantString" string="Resp_Debug03"/>
+      </nodes>
+      <nodes xmi:type="ComIbmTrace.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_12" location="676,113" destination="file" filePath="D:\TRAINEE\Synopsis\MATRIZ\DebugResp4.log" pattern="========================================RESPDEBUG-4.4===========================&#xD;&#xA;&#xD;&#xA;[ExceptionList:${ExceptionList}]&#xD;&#xA;[LocalEnvironment:${LocalEnvironment}]&#xD;&#xA;[Root:${Root}]&#xD;&#xA;[Environment:${Environment}]">
+        <translation xmi:type="utility:ConstantString" string="Resp_Debug04"/>
+      </nodes>
+      <nodes xmi:type="ComIbmTrace.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_13" location="683,28" destination="file" filePath="D:\TRAINEE\Synopsis\MATRIZ\DebugError.log" pattern="========================================ERROR-$%===========================&#xD;&#xA;&#xD;&#xA;[ExceptionList:${ExceptionList}]&#xD;&#xA;[LocalEnvironment:${LocalEnvironment}]&#xD;&#xA;[Root:${Root}]&#xD;&#xA;[Environment:${Environment}]">
+        <translation xmi:type="utility:ConstantString" string="Resp_Error"/>
+      </nodes>
+      <nodes xmi:type="ComIbmCompute.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_4" location="911,456" computeExpression="esql://routine/#postValidarPersona_Trans_Resp.Main" computeMode="destinationAndMessage">
+        <translation xmi:type="utility:ConstantString" string="Trans_Resp"/>
+      </nodes>
+      <nodes xmi:type="ComIbmCompute.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_14" location="907,360" computeExpression="esql://routine/#postValidarPersona_Trans_Resp01.Main" computeMode="destinationAndMessage">
+        <translation xmi:type="utility:ConstantString" string="Trans_Resp01"/>
+      </nodes>
+      <nodes xmi:type="ComIbmCompute.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_15" location="912,272" computeExpression="esql://routine/#postValidarPersona_Trans_Resp02.Main" computeMode="destinationAndMessage">
+        <translation xmi:type="utility:ConstantString" string="Trans_Resp02"/>
+      </nodes>
+      <nodes xmi:type="ComIbmCompute.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_16" location="911,23" computeExpression="esql://routine/#postValidarPersona_Trans_Error.Main" computeMode="destinationAndMessage">
+        <translation xmi:type="utility:ConstantString" string="Trans_Error"/>
+      </nodes>
+      <nodes xmi:type="ComIbmCompute.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_17" location="909,114" computeExpression="esql://routine/#postValidarPersona_Trans_Resp04.Main" computeMode="destinationAndMessage">
+        <translation xmi:type="utility:ConstantString" string="Trans_Resp04"/>
+      </nodes>
+      <nodes xmi:type="ComIbmCompute.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_19" location="911,193" computeExpression="esql://routine/#postValidarPersona_Trans_Resp03.Main" computeMode="destinationAndMessage">
+        <translation xmi:type="utility:ConstantString" string="Trans_Resp03"/>
+      </nodes>
+      <nodes xmi:type="ComIbmTrace.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_20" location="1056,457" destination="file" filePath="D:\TRAINEE\Synopsis\MATRIZ\DebugTrans.log" pattern="========================================RESPONSE ===========================&#xD;&#xA;&#xD;&#xA;[ExceptionList:${ExceptionList}]&#xD;&#xA;[LocalEnvironment:${LocalEnvironment}]&#xD;&#xA;[Root:${Root}]&#xD;&#xA;[Environment:${Environment}]">
+        <translation xmi:type="utility:ConstantString" string="Debug_Trans"/>
+      </nodes>
+      <nodes xmi:type="ComIbmTrace.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_21" location="1042,363" destination="file" filePath="D:\TRAINEE\Synopsis\MATRIZ\DebugTrans1.log" pattern="========================================RESPONSE 5.1 ===========================&#xD;&#xA;&#xD;&#xA;[ExceptionList:${ExceptionList}]&#xD;&#xA;[LocalEnvironment:${LocalEnvironment}]&#xD;&#xA;[Root:${Root}]&#xD;&#xA;[Environment:${Environment}]">
+        <translation xmi:type="utility:ConstantString" string="Debug_Trans01"/>
+      </nodes>
+      <nodes xmi:type="ComIbmTrace.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_22" location="1047,273" destination="file" filePath="D:\TRAINEE\Synopsis\MATRIZ\DebugTrans2.log" pattern="========================================RESPONSE 5.2===========================&#xD;&#xA;&#xD;&#xA;[ExceptionList:${ExceptionList}]&#xD;&#xA;[LocalEnvironment:${LocalEnvironment}]&#xD;&#xA;[Root:${Root}]&#xD;&#xA;[Environment:${Environment}]">
+        <translation xmi:type="utility:ConstantString" string="Debug_Trans02"/>
+      </nodes>
+      <nodes xmi:type="ComIbmTrace.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_23" location="1043,194" destination="file" filePath="D:\TRAINEE\Synopsis\MATRIZ\DebugTrans3.log" pattern="========================================RESPONSE 5.3 ===========================&#xD;&#xA;&#xD;&#xA;[ExceptionList:${ExceptionList}]&#xD;&#xA;[LocalEnvironment:${LocalEnvironment}]&#xD;&#xA;[Root:${Root}]&#xD;&#xA;[Environment:${Environment}]">
+        <translation xmi:type="utility:ConstantString" string="Debug_Trans03"/>
+      </nodes>
+      <nodes xmi:type="ComIbmTrace.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_24" location="1046,115" destination="file" filePath="D:\TRAINEE\Synopsis\MATRIZ\DebugTrans4.log" pattern="========================================RESPONSE 5.4===========================&#xD;&#xA;&#xD;&#xA;[ExceptionList:${ExceptionList}]&#xD;&#xA;[LocalEnvironment:${LocalEnvironment}]&#xD;&#xA;[Root:${Root}]&#xD;&#xA;[Environment:${Environment}]">
+        <translation xmi:type="utility:ConstantString" string="Debug_Trans04"/>
+      </nodes>
+      <nodes xmi:type="ComIbmTrace.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_25" location="1049,33" destination="file" filePath="D:\TRAINEE\Synopsis\MATRIZ\TransError.log" pattern="========================================RESPONSE ERROR===========================&#xD;&#xA;&#xD;&#xA;[ExceptionList:${ExceptionList}]&#xD;&#xA;[LocalEnvironment:${LocalEnvironment}]&#xD;&#xA;[Root:${Root}]&#xD;&#xA;[Environment:${Environment}]">
+        <translation xmi:type="utility:ConstantString" string="Debug_Error"/>
       </nodes>
       <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_13" targetNode="FCMComposite_1_1" sourceNode="FCMComposite_1_6" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>
       <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_14" targetNode="FCMComposite_1_7" sourceNode="InTerminal.Input_1" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>
       <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_15" targetNode="FCMComposite_1_6" sourceNode="FCMComposite_1_7" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>
       <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_19" targetNode="FCMComposite_1_9" sourceNode="FCMComposite_1_1" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>
       <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_21" targetNode="FCMComposite_1_10" sourceNode="FCMComposite_1_9" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>
-      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_22" targetNode="OutTerminal.Output_1" sourceNode="FCMComposite_1_10" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_1" targetNode="FCMComposite_1_2" sourceNode="FCMComposite_1_10" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_23" targetNode="FCMComposite_1_3" sourceNode="FCMComposite_1_2" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_24" targetNode="FCMComposite_1_5" sourceNode="FCMComposite_1_2" sourceTerminalName="OutTerminal.out1" targetTerminalName="InTerminal.in"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_25" targetNode="FCMComposite_1_8" sourceNode="FCMComposite_1_2" sourceTerminalName="OutTerminal.out2" targetTerminalName="InTerminal.in"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_27" targetNode="FCMComposite_1_11" sourceNode="FCMComposite_1_2" sourceTerminalName="OutTerminal.out3" targetTerminalName="InTerminal.in"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_29" targetNode="FCMComposite_1_12" sourceNode="FCMComposite_1_2" sourceTerminalName="OutTerminal.out4" targetTerminalName="InTerminal.in"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_30" targetNode="FCMComposite_1_13" sourceNode="FCMComposite_1_2" sourceTerminalName="OutTerminal.failure" targetTerminalName="InTerminal.in"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_2" targetNode="FCMComposite_1_4" sourceNode="FCMComposite_1_3" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_4" targetNode="FCMComposite_1_14" sourceNode="FCMComposite_1_5" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_6" targetNode="FCMComposite_1_15" sourceNode="FCMComposite_1_8" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_8" targetNode="FCMComposite_1_16" sourceNode="FCMComposite_1_13" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_10" targetNode="FCMComposite_1_17" sourceNode="FCMComposite_1_12" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_12" targetNode="FCMComposite_1_19" sourceNode="FCMComposite_1_11" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_17" targetNode="FCMComposite_1_20" sourceNode="FCMComposite_1_4" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_18" targetNode="OutTerminal.Output_1" sourceNode="FCMComposite_1_20" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_3" targetNode="FCMComposite_1_21" sourceNode="FCMComposite_1_14" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_5" targetNode="OutTerminal.Output_1" sourceNode="FCMComposite_1_21" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_7" targetNode="FCMComposite_1_22" sourceNode="FCMComposite_1_15" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_20" targetNode="OutTerminal.Output_1" sourceNode="FCMComposite_1_22" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_22" targetNode="FCMComposite_1_23" sourceNode="FCMComposite_1_19" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_26" targetNode="OutTerminal.Output_1" sourceNode="FCMComposite_1_23" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_28" targetNode="FCMComposite_1_24" sourceNode="FCMComposite_1_17" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_31" targetNode="OutTerminal.Output_1" sourceNode="FCMComposite_1_24" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_32" targetNode="FCMComposite_1_25" sourceNode="FCMComposite_1_16" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_33" targetNode="OutTerminal.Output_1" sourceNode="FCMComposite_1_25" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>
     </composition>
     <propertyOrganizer/>
     <stickyBoard/>
